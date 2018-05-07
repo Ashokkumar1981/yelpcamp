@@ -28,7 +28,8 @@ var express                 = require("express"),
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine","ejs");
-mongoose.connect("mongodb://localhost/yelp_camp_v12");
+// mongoose.connect("mongodb://localhost/yelp_camp_v12");
+mongoose.connect("mongodb://testdbuser1:testdbuser1@ds217310.mlab.com:17310/yelpcamp");
 app.use(methodOverride("_method"));
 app.use(flash());
 
