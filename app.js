@@ -29,6 +29,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine","ejs");
 
+// var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12";
 console.log("DATABASE: " + process.env.DATABASEURL);
 mongoose.connect(process.env.DATABASEURL);
 
